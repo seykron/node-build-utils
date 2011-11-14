@@ -1,0 +1,9 @@
+{
+    "name": "geohash",
+    "description": "GeoHash Algorithm first described by Gustavo Niemeyer in February 2008.  By interleaving latitude and longitude information in a bitwise fashion, a composite value is generated that provides a high resolution geographic point, and is well suited for storage or transmission as a character string.",
+    "keywords": ["geocode", "geohash", "geolocation"],
+    "author": ["Chris Williams", "David Troy"],
+    "email": "chris@iterativedesigns.com",
+    "version": "0.0.1",
+    "main": "lib/geohash"
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "Common VM Facade",
+  "version" : "v0.0.1",
+  "description" : "Adapter to compile source files with different compilers.",
+  "main" : "./lib/main",
+  "author" : {
+    "name" : "Matías Mirabelli",
+    "email" : "lumen.night@gmail.com"
+  }
+}
+
