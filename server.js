@@ -7,14 +7,14 @@ if (!process.env.NODE_GID) {
 }
 
 // Loads static content server and drops any privilege.
-require("./webapp/static-content-server");
+require("./src/static-content-server");
 process.setgid(process.env.NODE_GID || process.getgid());
 process.setuid(process.env.NODE_UID || process.getuid());
 
 // Initializes dependencies.
 Object.extend(global, require('prototype'));
 
-var core = require("./webapp");
+var core = require("./src");
 var util = require("util");
 var http = require("http");
 
