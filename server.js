@@ -39,17 +39,23 @@ server.on("request", function(request){
   var connection = request.accept(null, request.origin);
 
   connection.on("message", function(msg) {
-    console.debug("Message received: ");
-    console.debug(util.inspect(msg));
+    console.log("Message received: ");
+    console.log(msg);
+    var incomingWorkspace = JSON.parse(msg.utf8Data);
+    console.log("Message parsed: ");
+    console.log(incomingWorkspace);
 
-    var query = new Make.Query(JSON.parse(msg.utf8Data));
-    var messageAdapter = Make.MessageAdapter.fromQuery(query);
+    var workspace = new Make.Workspace(incomingWorkspace);
+    var compiler = Make.Compiler.newInstance(workspace);
 
-    console.log("Resolved Query: ");
-    console.debug(util.inspect(query));
+    console.log("Resolved workspace: ");
+    console.log(workspace);
 
-    messageAdapter.process(query, function(query, error) {
-      server.broadcast(JSON.stringify({ query : query, error : error }));
+    compiler.build(workspace, function(workspace, errors) {
+      server.broadcast(JSON.stringify({
+        workspace : workspace,
+        errors : errors
+      }));
     });
   });
 });

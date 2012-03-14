@@ -1,0 +1,710 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"so",
+				"sourcePath"
+			],
+			[
+				"works",
+				"workspace"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/view/asset/js/VMTest.js",
+			"settings":
+			{
+				"buffer_size": 3624,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 1944,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.js",
+			"settings":
+			{
+				"buffer_size": 868,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/make/index.js",
+			"settings":
+			{
+				"buffer_size": 614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/make/lib/integration/java/JavaCompiler.js",
+			"settings":
+			{
+				"buffer_size": 5527,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/make/lib/integration/java/JavaFileBuffer.js",
+			"settings":
+			{
+				"buffer_size": 956,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/make/lib/domain/FileBuffer.js",
+			"settings":
+			{
+				"buffer_size": 2053,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/make/lib/application/VM.js",
+			"settings":
+			{
+				"buffer_size": 8731,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 129.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"file_history":
+	[
+		"/home/matt/projects/personal/ui/node-build-utils/node-build-utils.sublime-project",
+		"/home/matt/.config/sublime-text-2/Packages/User/jslint.sublime-build",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/domain/FileBuffer.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/integration/java/JavaFileBuffer.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/view/index.html",
+		"/home/matt/projects/personal/ui/node-build-utils/src/view/asset/css/main.css",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/util/IO.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/application/Context.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/compile/index.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/view/layout.html",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/integration/java/JavaMessageAdapter.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/lib/integration/java/JavaCompiler.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/view/asset/js/VMTest.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/view/asset/js/TreeView.js",
+		"/home/matt/projects/personal/ui/node-build-utils/server.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/main.js",
+		"/home/matt/projects/personal/ui/node-build-utils/src/lib/application/Context.js",
+		"/home/matt/torus/A Rotating Torus, 3D-Rendered In Your Browser.html",
+		"/home/matt/torus/torus.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/compile/src/application/VM.js",
+		"/home/matt/projects/personal/web/peach/src/index.js",
+		"/home/matt/.config/sublime-text-2/Packages/User/HTML.sublime-settings",
+		"/home/matt/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
+		"/home/matt/projects/personal/ui/node-build-utils/src/package.json",
+		"/home/matt/projects/personal/ui/node-build-utils/src/lib/main.js",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/compile/package.json",
+		"/home/matt/projects/personal/ui/node-build-utils/node_modules/make/package.json",
+		"/home/matt/projects/personal/ui/node-build-utils/startup.sh",
+		"/home/matt/projects/personal/ui/node-build-utils/README"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"instance",
+			"deleteOldBinaries",
+			"error",
+			"debug",
+			".debug",
+			"send",
+			"listener",
+			"listeners",
+			"result",
+			"debug",
+			"console.",
+			"toJSON",
+			"addClassName",
+			"setStyle",
+			"VM.",
+			"observe",
+			"event",
+			"error",
+			"query",
+			"messageAdapter",
+			"query",
+			"Query",
+			"query",
+			"workspace",
+			"query",
+			"Query",
+			"query",
+			"messageListeners",
+			"this",
+			"this.",
+			"path.",
+			"path",
+			"fs",
+			"publicInterface",
+			"Object.create",
+			"make.Context",
+			"VM.Context",
+			"instance",
+			"context",
+			"Context",
+			"context",
+			"VM.Context.instance",
+			"query",
+			".Query",
+			"capitalize",
+			"make.Query",
+			"MessageListener",
+			"VM.",
+			"VM",
+			"onMessage",
+			"addBuffer",
+			"VM.MessageListener",
+			"MessageAdapter",
+			"JavaMessage",
+			"MessageAdapter",
+			"connections",
+			"context.compile",
+			"compile(",
+			"filter",
+			"bufferArea",
+			"setLog",
+			"compile",
+			"util",
+			"VM.Query",
+			"express",
+			"configure",
+			"Maps",
+			"require"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Compiler",
+			"});"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/view/asset/js/VMTest.js",
+					"settings":
+					{
+						"buffer_size": 3624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3624,
+								3624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1872.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 1944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1740,
+								1740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main.js",
+					"settings":
+					{
+						"buffer_size": 868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "node_modules/make/index.js",
+					"settings":
+					{
+						"buffer_size": 614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "node_modules/make/lib/integration/java/JavaCompiler.js",
+					"settings":
+					{
+						"buffer_size": 5527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2842,
+								2842
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1307.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "node_modules/make/lib/integration/java/JavaFileBuffer.js",
+					"settings":
+					{
+						"buffer_size": 956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "node_modules/make/lib/domain/FileBuffer.js",
+					"settings":
+					{
+						"buffer_size": 2053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1109,
+								1109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 76.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "node_modules/make/lib/application/VM.js",
+					"settings":
+					{
+						"buffer_size": 8731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6586,
+								6586
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "src/view/asset/js/VMTest.js",
+					"settings":
+					{
+						"buffer_size": 3624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								387,
+								387
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"filebuff",
+				"node_modules/make/lib/domain/FileBuffer.js"
+			],
+			[
+				"fileb",
+				"node_modules/make/lib/domain/FileBuffer.js"
+			],
+			[
+				"javafile",
+				"node_modules/make/lib/integration/java/JavaFileBuffer.js"
+			],
+			[
+				"filebu",
+				"node_modules/make/lib/domain/FileBuffer.js"
+			],
+			[
+				"jav",
+				"node_modules/make/lib/integration/java/JavaFileBuffer.js"
+			],
+			[
+				"javacompiler.js",
+				"node_modules/make/lib/integration/java/JavaCompiler.js"
+			],
+			[
+				"io.js",
+				"node_modules/make/lib/util/IO.js"
+			],
+			[
+				"javacomp",
+				"node_modules/make/lib/integration/java/JavaCompiler.js"
+			],
+			[
+				"javacom",
+				"node_modules/make/lib/integration/java/JavaCompiler.js"
+			],
+			[
+				"context.js",
+				"node_modules/make/lib/application/Context.js"
+			],
+			[
+				"vmtes",
+				"src/view/asset/js/VMTest.js"
+			],
+			[
+				"index.js",
+				"node_modules/make/index.js"
+			],
+			[
+				"main.js",
+				"src/main.js"
+			],
+			[
+				"server.js",
+				"server.js"
+			],
+			[
+				"vm.js",
+				"node_modules/make/lib/application/VM.js"
+			],
+			[
+				"layout.",
+				"src/view/layout.html"
+			],
+			[
+				"vmt",
+				"src/view/asset/js/VMTest.js"
+			],
+			[
+				"javamess",
+				"node_modules/make/lib/integration/java/JavaMessageAdapter.js"
+			],
+			[
+				"serv",
+				"server.js"
+			],
+			[
+				"javames",
+				"node_modules/make/lib/integration/java/JavaMessageAdapter.js"
+			],
+			[
+				"javafi",
+				"node_modules/make/lib/integration/java/JavaFileBuffer.js"
+			],
+			[
+				"vmte",
+				"src/view/asset/js/VMTest.js"
+			],
+			[
+				"context.",
+				"node_modules/make/lib/application/Context.js"
+			],
+			[
+				"vm.",
+				"node_modules/make/lib/application/VM.js"
+			],
+			[
+				"lay",
+				"src/view/layout.html"
+			],
+			[
+				"tree",
+				"src/view/asset/js/TreeView.js"
+			],
+			[
+				"context",
+				"node_modules/make/lib/application/Context.js"
+			],
+			[
+				"main.",
+				"src/main.js"
+			],
+			[
+				"index",
+				"node_modules/compile/index.js"
+			],
+			[
+				"index.h",
+				"src/view/index.html"
+			],
+			[
+				"packag.json",
+				"src/package.json"
+			],
+			[
+				"vm.s",
+				"node_modules/compile/src/application/VM.js"
+			],
+			[
+				"packa",
+				"node_modules/compile/package.json"
+			],
+			[
+				"package.json",
+				"node_modules/make/package.json"
+			],
+			[
+				"mai.js",
+				"src/lib/main.js"
+			],
+			[
+				"",
+				"server.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

@@ -1,23 +1,29 @@
 
-$(document).observe("dom:loaded", function() {
-  $("compile-button").observe("click", function(event) {
-    var context = VM.Context.instance(VM.lang.JAVA);
+$(document).ready(function() {
+  var compiler = new make.Compiler();
 
-    VM.Test.buffers.each(function(buffer) {
-      context.addBuffer(buffer.buffer);
+  $("#compile-button").click(function(event) {
+    var workspace = new make.Workspace({
+      lang : make.lang.JAVA
     });
 
-    VM.Test.buffers[0].session.clearAnnotations();
+    var buffers = make.Test.buffers;
 
-    context.compile({}, function(result) {
-      console.log(result);
+    for (var i = 0; i < buffers.length; i++) {
+      workspace.addBuffer(buffers[i].buffer);
+    }
 
-      if (result.error.length) {
-        var session = VM.Test.buffers[0].session;
-        var error;
+    make.Test.buffers[0].session.clearAnnotations();
 
-        for (var i = 0;  i < result.error.length; i++) {
-          error = result.error[i];
+    compiler.build(workspace, function(workspace, errors) {
+      var session = make.Test.buffers[0].session;
+      var error;
+
+      console.log(workspace);
+
+      if (errors.length) {
+        for (var i = 0;  i < errors.length; i++) {
+          error = errors[i];
 
           session.setAnnotations([{
             row : error.lineNumber - 1,
@@ -31,20 +37,20 @@ $(document).observe("dom:loaded", function() {
     });
   });
 
-  $("add-buffer-button").observe("click", function(event) {
+  $("add-buffer-button").click(function(event) {
     var bufferName =  prompt("Enter a valid buffer name");
 
     if (bufferName) {
-      VM.Test.switchBuffer(VM.Test.createBuffer(bufferName));
+      make.Test.switchBuffer(make.Test.createBuffer(bufferName));
     }
   });
 
-  VM.Test.switchBuffer(VM.Test.createBuffer("com.test.app.EntryPoint"));
+  make.Test.switchBuffer(make.Test.createBuffer("com.test.app.EntryPoint"));
 
   console.log("Ready.");
 });
 
-VM.Test = {
+make.Test = {
   /**
    * List of buffer descriptors.
    * @type Object[]
@@ -58,28 +64,25 @@ VM.Test = {
    * @return {Number} The unique identifier of the new buffer.
    */
   createBuffer : function(aName) {
-    var template = new Template(
-        '<a id="buffer-switch-#{id}" href="#">#{name}</a>');
     var id = Math.floor(new Date().getTime() * Math.random());
-    var bufferSwitch = new Element("li");
-    var bufferArea = new Element("pre");
+    var bufferArea = $("<pre />", { id : "buffer-area-" + id });
+    var bufferSwitch = $("<li />").html($("<a />", {
+      id : "buffer-switch-" + id,
+      href : "#"
+    }).html(aName));
 
-    bufferArea.id = "buffer-area-" + id;
-    bufferSwitch.update(template.evaluate({ id : id, name : aName}));
+    $("#buffer-switcher").append(bufferSwitch).attr("title", aName);
+    $("#content").append(bufferArea);
 
-    $("buffer-switcher").insert(bufferSwitch).title = aName;
-    $("content").insert(bufferArea);
-
-    var editor = ace.edit(bufferArea);
+    var editor = ace.edit(bufferArea[0]);
     editor.setTheme("ace/theme/twilight");
 
     var Mode = require("ace/mode/java").Mode;
     editor.getSession().setMode(new Mode());
 
-    $("buffer-switch-" + id).observe("click", this.switchBuffer
-        .bind(this, id));
+    $("#buffer-switch-" + id).click(this.switchBuffer.bind(this, id));
 
-    var buffer = new VM.Buffer({
+    var buffer = new make.Buffer({
       sourceCode : null,
       name : aName
     });
@@ -92,7 +95,7 @@ VM.Test = {
       session : editor.getSession()
     });
 
-    bufferArea.observe("keyup", function(event) {
+    bufferArea.keyup(function(event) {
       buffer.sourceCode = editor.getSession().getValue();
     });
 
@@ -113,8 +116,8 @@ VM.Test = {
 
     this.resetSelection();
 
-    buffer.areaEl.setStyle({ display : "block" });
-    buffer.switchEl.addClassName("selected");
+    buffer.areaEl.css({ display : "block" });
+    buffer.switchEl.addClass("selected");
   },
 
   /**
@@ -124,22 +127,23 @@ VM.Test = {
    * @return Returns the buffer object or <code>null</code> if it doesn't exist.
    */
   getBufferById : function(bufferId) {
-    var buffers = this.buffers.collect(function(buffer) {
-      if (buffer.id === bufferId) {
-        return buffer;
+    for (var i = 0; i < this.buffers.length; i++) {
+      if (this.buffers[i].id === bufferId) {
+        return this.buffers[i];
       }
-    });
-    return buffers.compact().shift() || null;
+    }
+
+    return null;
   },
 
   /**
    * Removes the focus from the current active buffer.
    */
   resetSelection : function() {
-    this.buffers.each(function(buffer) {
-      buffer.areaEl.setStyle({ display : "none" });
-      buffer.switchEl.removeClassName("selected");
-    });
+    for (var i = 0; i < this.buffers.length; i++) {
+      this.buffers[i].areaEl.css({ display : "none" });
+      this.buffers[i].switchEl.removeClass("selected");
+    }
   }
 };
 
