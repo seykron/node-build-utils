@@ -13,5 +13,4 @@ export LOG_LEVEL=debug;
 export WEBSOCKET_PORT=8085;
 
 # Starts the application.
-node server.js
-
+node startup.js
