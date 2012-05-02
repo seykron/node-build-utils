@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var Service = require("./lib/Service");
-var express = require('express');
 var fs = require("fs");
 
 var server = Service.listen(8000, "/shared");
