@@ -22,7 +22,7 @@ jQuery(function () {
     }
   };
 
-  var editor = new VM.SourceEditor(jQuery("#editor"), "ws://localhost:8085",
+  var editor = new VM.SourceEditor(jQuery("#editor"), "ws://localhost:8000",
     VM.lang.JAVA, processResult);
 
   editor.render();

@@ -1,23 +1,46 @@
+#!/usr/bin/env node
+
 var Service = require("./lib/Service");
 var express = require('express');
+var fs = require("fs");
 
-if (!process.env.NODE_UID) {
-  console.warn("The NODE_UID environment variable isn't set.");
-}
-if (!process.env.NODE_GID) {
-  console.warn("The NODE_GID environment variable isn't set.");
-}
+var server = Service.listen(8000, "/shared");
+var MIME_TYPES = {
+  "html": "text/html",
+  "js": "text/javascript",
+  "css": "text/css",
+  "jpg": "image/jpeg",
+  "jpeg": "image/jpeg",
+  "gif": "image/gif",
+  "png": "image/png"
+};
 
-process.setgid(process.env.NODE_GID || process.getgid());
-process.setuid(process.env.NODE_UID || process.getuid());
+server.on("request", function (req, res) {
+  var resource;
 
-var server = Service.listen(process.env.WEBSOCKET_PORT || 8000, "/shared");
+  if (req.method === "GET" && req.url.indexOf("/asset") === 0) {
+    resource = __dirname + '/example/' + req.url;
+  } else if (req.method === "GET" && req.url === "/") {
+    resource = __dirname + '/example/index.html';
+  }
 
-// Configures the rendering engine.
-server.set('view engine', 'mustache')
-server.set("views", __dirname + '/example');
-server.register(".html", require('stache'));
-server.use("/asset", express.static(__dirname + '/example/asset'));
-server.get('/', function (req, res) {
-  res.render("index.html");
+  if (resource) {
+    fs.readFile(resource, function (err, data) {
+      var extension = resource.substr(resource.lastIndexOf(".") + 1);
+      var contentType = MIME_TYPES[extension];
+
+      if (err) {
+        res.writeHead(404);
+        return res.end("NOT_FOUND: " + resource);
+      }
+      if (!contentType) {
+        res.writeHead(500);
+        return res.end("UNSUPPORTED_CONTENT_TYPE: " + extension);
+      }
+
+      res.setHeader("Content-Type", contentType);
+      res.writeHead(200);
+      res.end(data);
+    });
+  }
 });
