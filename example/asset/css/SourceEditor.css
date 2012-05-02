@@ -1,85 +1,6 @@
-html,body,div,span,
-applet,object,iframe,code,
-h1,h2,h3,h4,h5,h6,p2,blockquote,pre,
-a,abbr,acronym,address,big,cite,
-del,dfn,font,img,ins,kbd,q,s,samp,
-small,strike,sub,sup,tt,var,
-dd,dl,dt,li,ol,ul,
-fieldset,form,label,legend,
-table,caption,tbody,tfoot,thead,tr,th,td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: normal;
-  font-style: normal;
-  font-family: inherit;
-  text-align: left;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-ul {
-  list-style: none;
-}
-q:before,q:after,
-blockquote:before,blockquote:after {
-  content: "";
-}
-p {
-  margin-top: 20px;
-}
+/** SourceEditor widget stylesheet. */
 
-p span {
-  display: block;
-  padding-top: 8px;
-}
-
-h1 {
-  width: 100%;
-  padding: 80px 0 30px 0;
-}
-
-h2 {
-  text-align: center;
-  padding: 40px 0 0 0;
-  width: 75%;
-  margin: 0 auto;
-}
-
-body {
-  background: #131925;
-  font-family: Arial;
-}
-
-textarea {
-  width: 100%;
-  height: 100%;
-  border-style: hidden;
-}
-
-#toolbar {
-  height: 8%;
-  text-align: right;
-}
-
-#outer-wrapper {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  overflow: hidden;
-  margin: 2%;
-}
-
-ol, .content-description {
-  font-size: 16px;
-  padding: 30px;
-  margin: 0 auto;
-}
-
-ul.navigation {
+.sourceEditor ul.buffer-switcher {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -87,7 +8,7 @@ ul.navigation {
   width: 10%;
 }
 
-ul.navigation li {
+.sourceEditor ul.buffer-switcher li {
   -webkit-border-radius: 6px 0 0 6px;
   -moz-border-radius: 6px 0 0 6px;
   border-radius: 6px 0 0 6px;
@@ -99,11 +20,11 @@ ul.navigation li {
   z-index: 1;
 }
 
-ul.navigation li.selected {
+.sourceEditor ul.buffer-switcher li.selected {
   z-index: 3;
 }
 
-ul.navigation li.shadow {
+.sourceEditor ul.buffer-switcher li.shadow {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -117,7 +38,8 @@ ul.navigation li.shadow {
   box-shadow: #111 0 -2px 6px;
 }
 
-ul.navigation li a:link, ul.navigation li a:visited {
+.sourceEditor ul.buffer-switcher li a:link,
+.sourceEditor ul.buffer-switcher li a:visited {
   -webkit-border-radius: 6px 0 0 6px;
   -moz-border-radius: 6px 0 0 6px;
   border-radius: 6px 0 0 6px;
@@ -139,11 +61,12 @@ ul.navigation li a:link, ul.navigation li a:visited {
   -o-transition: background-color 0.3s linear;
 }
 
-ul.navigation li a:hover {
+.sourceEditor ul.buffer-switcher li a:hover {
   background-color: #5a87dd;
 }
 
-ul.navigation li.selected a:link, ul.navigation li.selected a:visited {
+.sourceEditor ul.buffer-switcher li.selected a:link,
+.sourceEditor ul.buffer-switcher li.selected a:visited {
   color: #2B477D;
   border: solid 1px #fff;
   -webkit-transition: background-color 0.2s linear;
@@ -152,7 +75,7 @@ ul.navigation li.selected a:link, ul.navigation li.selected a:visited {
   background-color: #f2f2f2;
 }
 
-#content {
+.sourceEditor .editor-container {
   width: 90%;
   background: #f2f2f2;
   padding: 0;
@@ -161,7 +84,7 @@ ul.navigation li.selected a:link, ul.navigation li.selected a:visited {
   height: 92%;
 }
 
-pre { 
+.sourceEditor pre {
   margin: 0;
   position: absolute;
   top: 0;
