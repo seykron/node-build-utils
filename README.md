@@ -17,13 +17,12 @@ This project is built on top of [socket.io](http://socket.io/) transport system,
 
 2. Start the example!
 ```bash
-# Linux users:
-./startup.js
-
-# Windows users:
-node startup.js
+  # Linux users:
+  ./startup.js
+  # Windows users:
+  node startup.js
 ```
-Now you should be able to play a little with the example application in localhost at port 8000:
+Now you should be able to play a little with the example application at localhost in port 8000:
 ```
-http://localhost:8000/
+  http://localhost:8000/
 ```
