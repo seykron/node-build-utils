@@ -57,3 +57,12 @@ When a *Workspace* is sent to the server the entry point will resolve which adap
 
 Each workspace handler is responsible of processing incoming buffers and then notify results to the client. So far the result is a detailed list of syntax and compilation errors, nevertheless it could be whatever supported by the handler (for example, it could create a distribution package).
 
+Supported Workspaces
+--------------------
+The following sections describe the existing workspace handlers and expected input/outputs.
+
+### Java
+Represents a java source directory. The full workspace is processed by using the java compiler available in the environment. The result is the list of compilation errors.
+
+### Php
+Represets a PHP project. The workspace directory and all subdirectories will be scanned for PHP source files in order to invoke the PHP lint process over them. The result is the list of syntax errors reported by the PHP lint (php -l).
