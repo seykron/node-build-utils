@@ -26,3 +26,34 @@ Now you should be able to play a little with the example application at localhos
 ```
   http://localhost:8000/
 ```
+
+Overall architecture
+--------------------
+
+```
+          CLIENT              |                     SERVER
+                              |
+  /--------------------\      | /-------------------\         .----------.
+  |      Workspace     |------->| WorkspaceResolver |        /............\
+  |--------------------|      | \-------------------/        | FileSystem |
+  | +lang:String       |      |   |                          \-..........-/
+  | +buffers:VM.Buffer |      |   |                                |
+  \--------------------/      |   |                                |
+                              |   |                                |
+                              |   |  /---------------\  /---------------------\
+                              |   |->| JavaWorkspace |->| /AbstractWorkspace/ |
+                              |   |  \---------------/  |---------------------|
+                              |   |                     | +buffers:FileBuffer |
+                              |   |                     |---------------------|
+                              |   |  /--------------\   | /+build(callback)/  |
+                              |   |->| PhpWorkspace |-->| +prepare(callback)  |
+                              |      \--------------/   \---------------------/
+
+```
+
+The core concept is the *Workspace*. A *Workspace* contains a set of *buffers* representing the internal resource tree. When a *Workspace* is created it receives the name of the *adapter* which will process it.
+
+When a *Workspace* is sent to the server the entry point will resolve which adapter must process the request, and then it delegates the incoming workspace object to the handler.
+
+Each workspace handler is responsible of processing incoming buffers and then notify results to the client. So far the result is a detailed list of syntax and compilation errors, nevertheless it could be whatever supported by the handler (for example, it could create a distribution package).
+
